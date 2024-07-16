@@ -6,6 +6,7 @@ import Together from './pages/Together';
 import Community from './pages/Community';
 import Login from './pages/Login';
 import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/community" element={<Community />} />
         <Route path="/login" element={<Login />} />
         </Routes>
+        <Footer/>
         
     </Router>
   );
