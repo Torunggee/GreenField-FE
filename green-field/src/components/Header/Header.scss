@@ -3,8 +3,9 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: #333;
+  background-color: #fff;
   color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
   .logo {
     display: flex;
@@ -14,7 +15,8 @@
       display: flex;
       align-items: center;
       text-decoration: none;
-      color: #fff;
+      color: #274C5B;
+      font-weight: bold;
 
       img {
         height: 40px; /* 로고 이미지의 높이를 조절합니다 */
@@ -23,24 +25,41 @@
       }
     }
   }
+}
 
-  .nav ul {
-    list-style: none;
+.nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0 10px;
     display: flex;
-    margin: 0;
-    padding: 0;
-  }
+    align-items: center;
 
-  .nav li {
-    margin-left: 20px;
-  }
+    &:nth-child(odd) {
+      margin: 0;
+    }
 
-  .nav a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1em;
-    &:hover {
-      text-decoration: underline;
+    span {
+      margin: 0 10px;
+      color: #525C60;
+    }
+
+    a {
+      text-decoration: none;
+      color: #525C60;
+      font-size: 1em;
+
+      &.active {
+        font-weight: bold; /* 활성화된 링크 볼드 처리 */
+        color: #274C5B; /* 활성화된 링크 색상 변경 */
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
