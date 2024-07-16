@@ -5,8 +5,8 @@ import QnA from './pages/QnA';
 import Together from './pages/Together';
 import Community from './pages/Community';
 import Login from './pages/Login';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 function App() {
   return (
