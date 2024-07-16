@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Container from '../components/Container/Container';
-import '../Signup.css';
+import '../styles/Signup.css';
 import { Link } from 'react-router-dom';
 
 const Signup = () => {
