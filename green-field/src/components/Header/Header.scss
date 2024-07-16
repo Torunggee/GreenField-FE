@@ -62,4 +62,28 @@
       }
     }
   }
+
+@media (max-width: 768px) {
+  align-items: flex-start;
+
+  .logo {
+    margin-bottom: 10px;
+
+    img {
+      height: 30px;
+    }
+  }
+
+  .nav ul {
+    flex-direction: column;
+
+    li {
+      margin: 5px 0;
+
+      &:nth-child(odd) {
+        display: none;
+      }
+    }
+  }
+}
 }
