@@ -5,6 +5,7 @@ import QnA from './pages/QnA';
 import Together from './pages/Together';
 import Community from './pages/Community';
 import Login from './pages/Login';
+import Signup from './pages/Signup';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
@@ -18,9 +19,9 @@ function App() {
         <Route path="/together" element={<Together />} />
         <Route path="/community" element={<Community />} />
         <Route path="/login" element={<Login />} />
-        </Routes>
-        <Footer/>
-        
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
+      <Footer/>
     </Router>
   );
 }
