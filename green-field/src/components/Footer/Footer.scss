@@ -1,0 +1,54 @@
+.footer {
+    background-color: #727272;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  
+    .footer-content {
+      max-width: 1200px;
+      margin: 0 auto;
+  
+      p {
+        margin: 0;
+
+        .bold {
+            font-weight: bold; /* 볼드 처리 */
+          }
+      }
+  
+      nav {
+        margin-top: 10px;
+  
+        ul {
+          list-style: none;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+  
+          li {
+            a {
+              text-decoration: none;
+              color: #fff;
+  
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .footer-content {
+        nav {
+          ul {
+            flex-direction: column;
+            gap: 10px;
+          }
+        }
+      }
+    }
+  }
+  
