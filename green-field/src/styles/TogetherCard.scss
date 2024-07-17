@@ -1,0 +1,52 @@
+.together-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    h3 {
+      margin: 0;
+      font-size: 1.2em;
+      color: #333;
+    }
+  
+    p {
+      margin: 10px 0;
+      color: #666;
+    }
+  
+    .author {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+  
+      span {
+        margin-left: 10px;
+        color: #888;
+      }
+    }
+  
+    .progress {
+      display: flex;
+      align-items: center;
+  
+      .progress-bar {
+        height: 10px;
+        background-color: #f00;
+        border-radius: 5px;
+        flex-grow: 1;
+        margin-right: 10px;
+      }
+  
+      span {
+        font-size: 0.8em;
+        color: #333;
+      }
+    }
+  }
+  
