@@ -3,12 +3,14 @@
       position: relative;
       width: 100%;
       max-width: 100%; /* 최대 너비를 설정하거나 필요에 따라 조정 */
+      height: 30vh;
       margin: 0 auto;
   
       img {
         width: 100%;
-        height: auto;
-        display: block;
+        height: 100%;
+        object-fit: cover;
+        display:flex;
       }
   
       .overlay {

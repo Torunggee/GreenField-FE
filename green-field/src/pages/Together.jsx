@@ -4,6 +4,7 @@ import togetherMain from '../assets/images/Together-main.png';
 import Container from '../components/Container'
 import TogetherCard from '../components/TogetherCard';
 import '../styles/TogetherCard.scss'
+import TipCard from '../components/TipCard';
 
 const Together = () => {
   return (
@@ -19,6 +20,7 @@ const Together = () => {
         <Container>
           <h3>함께 농사에 참여해요!</h3>
           <p>새로운 농촌 환경을 만들어가요</p>
+          <br />
 
           <div className="together-cards">
           <TogetherCard
@@ -47,6 +49,22 @@ const Together = () => {
 
         </Container>
       </div>
+
+      <Container>
+        <h3>농사 Tip!</h3>
+        <div className="tip-cards">
+          <TipCard
+            image={togetherMain}
+            title="모내기 어떻게 잘하나요?"
+            />
+        </div>
+
+        <h3>원하는 Tip이 없나요?</h3>
+        <div>
+          <button>{"QNA로 이동"}</button>
+          <button>{"AI Chat"}</button>
+        </div>
+      </Container>
       
 
     </div>
