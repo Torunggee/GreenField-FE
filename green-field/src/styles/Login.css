@@ -1,0 +1,84 @@
+/* Login.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.login-container {
+    text-align: center;
+    margin-top: 0;
+}
+
+.login-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.login-container img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.login-container p {
+    margin-bottom: 20px;
+}
+
+.login-container form {
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    padding: 12px 24px;
+    background-color: coral;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #e57373;
+}
+
+.login-container .social-login {
+    margin-top: 20px;
+}
+
+.login-container .social-login button {
+    padding: 15px 60px;
+    background-color: coral;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container .social-login button.google {
+    background-color: #db4437;
+    color: white;
+}
+
+.login-container .social-login button.kakao {
+    background-color: #fee500;
+    color: black;
+}
+
+.login-container .social-login button.naver {
+    background-color: #03c75a;
+    color: white;
+}
+
+.login-container .social-login button:hover {
+    opacity: 0.8;
+}
