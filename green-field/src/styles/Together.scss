@@ -39,7 +39,13 @@
     }
 
     .together-cards {
-      display: flex;
+      display:flex;
+    }
+
+    .tip-cards {
+      display:flex;
+      gap: 40px;
+      justify-content: center;
     }
 
   }

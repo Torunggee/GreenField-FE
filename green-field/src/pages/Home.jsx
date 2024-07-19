@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Home.scss';
-import Container from '../components/Container';
+import Container from '../components/Container/Container';
 
 
 const newsItems = [

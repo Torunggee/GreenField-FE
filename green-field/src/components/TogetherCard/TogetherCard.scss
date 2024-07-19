@@ -1,0 +1,76 @@
+.together-card {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    margin: 10px;
+    width: 420px;
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    h3 {
+      margin: 0;
+      padding: 0;
+      font-size: 1.2em;
+      color: #333;
+      white-space: nowrap; /* 한 줄로 표시 */
+      overflow: hidden; /* 넘치는 텍스트 숨김 */
+      text-overflow: ellipsis; 
+    }
+  
+    p {
+      margin: 0;
+      padding: 0;
+      color: #666;
+      white-space: nowrap; /* 한 줄로 표시 */
+      overflow: hidden; /* 넘치는 텍스트 숨김 */
+      text-overflow: ellipsis; 
+    }
+  
+    .author {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+  
+      img {
+        width: 40px; /* 프로필 이미지 크기 */
+        height: 40px; /* 프로필 이미지 크기 */
+        border-radius: 50%; /* 원형으로 만들기 */
+        object-fit: cover;
+        margin-right: 10px;
+      }
+  
+      .name {
+        font-weight: bold;
+        color: #333;
+      }
+  
+      .role {
+        font-size: 0.8em;
+        color: #888;
+        margin-left: 5px;
+      }
+    }
+  
+    .progress {
+      display: flex;
+      align-items: center;
+  
+      .progress-bar {
+        height: 10px;
+        background-color: #f00;
+        border-radius: 5px;
+        flex-grow: 1;
+        margin-right: 10px;
+      }
+  
+      span {
+        font-size: 0.8em;
+        color: #333;
+      }
+    }
+  }
+  

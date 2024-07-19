@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/TogetherCard.scss';
+import './TogetherCard.scss';
 
 const TogetherCard = ({ title, description, author, progress, max }) => {
   return (
@@ -7,7 +7,11 @@ const TogetherCard = ({ title, description, author, progress, max }) => {
       <h3>{title}</h3>
       <p>{description}</p>
       <div className="author">
-        <span>{author}</span>
+        <img src={author.profileImage} alt={author.name} />
+        <div>
+          <span className="name">{author.name}</span>
+          <span className="role">{author.role}</span>
+        </div>
       </div>
       <div className="progress">
         <div className="progress-bar" style={{ width: `${(progress / max) * 100}%` }}></div>

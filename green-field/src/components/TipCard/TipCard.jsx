@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/TipCard.scss';
+import './TipCard.scss';
 
 const TipCard = ({ image, title }) => {
   return (
