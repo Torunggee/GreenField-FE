@@ -1,31 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import QnA from './pages/QnA';
 import Together from './pages/Together';
 import Community from './pages/Community';
 import Login from './pages/Login';
-import Signup from './pages/Signup';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
-const App = () => {
-  const [activeTab, setActiveTab] = useState('소통');
-
+function App() {
   return (
     <Router>
       <Header />
-      <div className='app'>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/qna" element={<QnA />} />
-          <Route path="/together" element={<Together />} />
-          <Route path="/community" element={<Community activeTab={activeTab} onTabChange={setActiveTab} />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+      <Routes>
+      <Route path="/" element={<Home />} />
+        <Route path="/qna" element={<QnA />} />
+        <Route path="/together" element={<Together />} />
+        <Route path="/community" element={<Community />} />
+        <Route path="/login" element={<Login />} />
         </Routes>
-      </div>
-      <Footer/>
+        <Footer/>
+        
     </Router>
   );
 }
