@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Container from '../components/Container/Container';
 import '../styles/Login.css';
 import { Link } from 'react-router-dom';
 
@@ -14,7 +13,7 @@ const Login = () => {
   }
 
   return (
-    <Container className="container">
+    <div className="Lcontainer">
       <div className="login-container">
         <h2>청춘과 밭에 오신 걸 환영해요</h2>
         <img src="/logo.png" alt="청춘과밭"/>
@@ -44,7 +43,7 @@ const Login = () => {
           <button className='google'>구글로 로그인</button>
         </div><br />
       </div>
-    </Container>
+    </div>
   );
 }
 

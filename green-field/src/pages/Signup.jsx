@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import Container from '../components/Container/Container';
 import '../styles/Signup.css';
 import { Link } from 'react-router-dom';
+import {
+    createUserWithEmailAndPassword
+} from 'firebase/auth';
+import { auth } from '../firebase';
 
 const Signup = () => {
     const [email, setEmail] = useState('');
@@ -11,38 +14,44 @@ const Signup = () => {
 
     /*회원가입 불가한 사항들 error처리 */
     const handleSignup = (e) => {
-    e.preventDefault();
+        e.preventDefault();
+        const newErrors = {};
+        if (!email) {
+            newErrors.email = '이메일을 입력해주세요.';
+        } else if (!/\S+@\S+\.\S+/.test(email)) {
+            newErrors.email = '올바른 이메일 형식을 입력해주세요.';
+        } /*else if ( 중복 이메일 검사 ) {
+            newErrors.email = '이메일이 중복입니다.';
+        }*/
 
-    const newErrors = {};
-    if (!email) {
-        newErrors.email = '이메일을 입력해주세요.';
-    } else if (!/\S+@\S+\.\S+/.test(email)) {
-        newErrors.email = '올바른 이메일 형식을 입력해주세요.';
-    } /*else if ( 중복 이메일 검사 ) {
-        newErrors.email = '이메일이 중복입니다.';
-    }*/
+        if (!password) {
+            newErrors.password = '비밀번호를 입력해주세요.';
+        } else if (password.length < 6) {
+            newErrors.password = '비밀번호는 최소 6자리 이상이어야 합니다.';
+        }
 
-    if (!password) {
-        newErrors.password = '비밀번호를 입력해주세요.';
-    } else if (password.length < 6) {
-        newErrors.password = '비밀번호는 최소 6자리 이상이어야 합니다.';
-    }
+        if (password !== confirmPassword) {
+            newErrors.confirmPassword = '비밀번호가 일치하지 않습니다.';
+        }
 
-    if (password !== confirmPassword) {
-        newErrors.confirmPassword = '비밀번호가 일치하지 않습니다.';
-    }
-
-    if (Object.keys(newErrors).length > 0) {
-        setErrors(newErrors);
-        return;
-    }
-
-    // 회원가입 로직
-    console.log('회원가입 성공:', { email, password });
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            return;
+        }
     };
+    // 회원가입 로직
+    const register = async () => {
+        try {
+            const user = await createUserWithEmailAndPassword(auth, email, password);
+            console.log(user);
+        } catch (error) {
+            console.log(error.message);
+        }
+    }
+
 
     return (
-        <Container>
+        <div className = 'Scontainer'>
             <div className='signup-container'>
                 <h2>회원가입 하기</h2>
                 <div className="logo-container">
@@ -82,10 +91,10 @@ const Signup = () => {
                         />
                         {errors.confirmPassword && <p className="error">{errors.confirmPassword}</p>}
                     </div><br />
-                    <button type="submit" className="signup-button">가입하기</button>
+                    <button onClick={ register } type="submit" className="signup-button">가입하기</button>
                 </form><br />
             </div>
-        </Container>
+        </div>
     );
 }
 

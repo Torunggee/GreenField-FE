@@ -1,5 +1,5 @@
 /* Signup.css */
-.container {
+.Scontainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +49,6 @@
 
 .form-group {
     position: relative; /* 상대 위치 설정 */
-    width: 100%;
     margin-bottom: 30px; /* 인풋과 에러 메시지 사이 간격 조정 */
 }
 

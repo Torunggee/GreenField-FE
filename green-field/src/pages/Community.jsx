@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Container from '../components/Container/Container';
 import '../styles/Community.css'
 import Board from './Board.jsx'
 
@@ -22,7 +21,6 @@ const Community = ({ activeTab, onTabChange }) => {
   }
 
   return (
-    // <Container>
       <div className='community-container'>
         <div className='tabs'>
           <button
@@ -100,7 +98,6 @@ const Community = ({ activeTab, onTabChange }) => {
 
         <Board activeTab={activeTab} searchQuery={searchQuery} regionTag={regionTag} sortOption={sortOption} /><br /><br />
       </div>
-    // </Container>
   );
 }
 

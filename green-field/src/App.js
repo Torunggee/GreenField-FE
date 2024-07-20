@@ -6,6 +6,7 @@ import Together from './pages/Together';
 import Community from './pages/Community';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
+import GetUserInfo from './pages/GetUserInfo';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 
@@ -23,6 +24,7 @@ const App = () => {
           <Route path="/community" element={<Community activeTab={activeTab} onTabChange={setActiveTab} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/getuserinfo" element={<GetUserInfo />} />
         </Routes>
       </div>
       <Footer/>

@@ -1,5 +1,4 @@
 import React from 'react';
-import Container from '../components/Container/Container';
 import '../styles/Board.css';
 
 const Board = ({ activeTab, searchQuery, regionTag, sortOption }) => {
@@ -38,7 +37,6 @@ const Board = ({ activeTab, searchQuery, regionTag, sortOption }) => {
 
 
     return (
-        // <Container>
             <div className="board">
             {posts.map((post, index) => (
                 <div key={index} className="post">
@@ -48,7 +46,6 @@ const Board = ({ activeTab, searchQuery, regionTag, sortOption }) => {
                 </div>
             ))}
             </div>
-        // </Container>
     );
 }
 
