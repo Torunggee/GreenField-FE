@@ -3,23 +3,11 @@ import '../styles/Together.scss';
 import togetherMain from '../assets/images/Together-main.png';
 import Container from '../components/Container/Container'
 import TogetherCard from '../components/TogetherCard/TogetherCard';
-import TipCard from '../components/TipCard/TipCard';
 
-const Together = () => {
+const TogetherList = () => {
   return (
     <div className = "together">
-      <div className = "image-container">
-        <img src={togetherMain} alt='함께농사 메인 이미지'/>
-        <div className = "overlay">
-          <h3>함께 농사하는 재미!</h3> 
-        </div>
-      </div>
-
-      <div className = "red-background">
         <Container>
-          <h3>함께 농사에 참여해요!</h3>
-          <p>새로운 농촌 환경을 만들어가요</p>
-          <br />
 
           <div className="together-cards">
           <TogetherCard
@@ -57,35 +45,8 @@ const Together = () => {
           />
         </div>
         </Container>
-      </div>
-
-      <Container>
-        <h3>농사 Tip!</h3>
-        <div className="tip-cards">
-          <TipCard
-            image={togetherMain}
-            title="모내기 어떻게 잘하나요?"
-            />
-            <TipCard
-            image={togetherMain}
-            title="모내기 어떻게 잘하나요?"
-            />
-            <TipCard
-            image={togetherMain}
-            title="모내기 어떻게 잘하나요?"
-            />
-        </div>
-
-        <h3>원하는 Tip이 없나요?</h3>
-        <div>
-          <button>{"QNA로 이동"}</button>
-          <button>{"AI Chat"}</button>
-        </div>
-      </Container>
-      
-
     </div>
   );
 }
 
-export default Together;
+export default TogetherList;

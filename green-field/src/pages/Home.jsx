@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Home.scss';
+import '../styles/Home.scss';
 import Container from '../components/Container/Container';
 
 
