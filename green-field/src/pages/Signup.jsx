@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import '../styles/Signup.css';
-import { Link } from 'react-router-dom';
+import { 
+    Link,
+    useNavigate
+} from 'react-router-dom';
 import {
     createUserWithEmailAndPassword
 } from 'firebase/auth';
@@ -11,6 +14,7 @@ const Signup = () => {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [errors, setErrors] = useState({});
+    const navigate = useNavigate();
 
     /*회원가입 불가한 사항들 error처리 */
     const handleSignup = (e) => {
@@ -44,6 +48,7 @@ const Signup = () => {
         try {
             const user = await createUserWithEmailAndPassword(auth, email, password);
             console.log(user);
+            navigate('/getuserinfo');
         } catch (error) {
             console.log(error.message);
         }
